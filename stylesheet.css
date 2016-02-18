@@ -1,10 +1,9 @@
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-overflow: hidden;}
+overflow: overlay;}
 
 body {
-  width: 0px;
   padding: 0px;
   background: #0C112B;
   
@@ -154,6 +153,40 @@ body {
     transform: translateY(0px);
   }
 }
+
+.art-bg{
+  background: white;
+  opacity: 0.7;
+  width: 99%;
+}
+.art-cont{
+  z-index: 200;
+  color: #454545;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 10px;
+  margin-top: -30px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+.art-cont_sub{
+  text-align: left;
+  font-weight:600;
+  font-size: 21px;  
+}
+.art-cont_cont{
+  text-align: justify;
+  font-weight: normal;
+  font-family: initial;
+  font-size: 18px;  
+}
+.art-cont_tab{
+    text-align: center;
+    opacity: 1;
+    background-color: white;
+  }
 
 /* block at the bottom*/
 .wrapper {
