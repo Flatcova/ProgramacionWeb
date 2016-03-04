@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<article class="art-bg">
+	<scan class="art-cont">
+        <h1>Introducción a la presentación en pantalla con CSS</h1>
+        <h3 class="art-cont_sub">El papel del archivo reset CSS</h3>
+        <div class="art-cont_cont">
+	        <p>El archivo reset.css es una base de estilos sobre la cual se puede comenzar a armar los HTML. La idea de este archivo es “resetear” el HTML en todos los navegadores para dejarlos 100% idénticos, es decir que en todos los navegadores se verá exactamente igual, y en la práctica ningún elemento tendrá propiedades pre-definidas por el navegador.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Breve historia de las técnicas de presentación en pantallas para la Web</h3>
+		<div class="art-cont_cont">
+			<p>Cuando se empezó con el diseño web a mediados de los 90, el único método que se podía emplear para crear estructuras visuales complejas, como por ejemplo la presentación en varias columnas, consistía en emplear el elemento tabla (< table >). La tabla HTML estaba pensada inicialmente para mostrar datos de manera estructurada, en filas, columnas y celdas. Sin embargo los diseñadores empezaron a utilizar este elemento como base para las estructuras visuales de las páginas. En aquel momento esa técnica estaba plenamente justificada: las tablas era lo único que tenían para generar el tipo de diseños que se necesitaban y, además, eran un recurso extremadamente flexible.
+			<br><br>
+			A partir de aquí, empezaron a utilizarse técnicas como el anidamiento de tablas, es decir, crear tablas dentro de celdas de otras tablas de mayor tamaño.
+			<br><br>
+			Puesto que la primera fila se iba a convertir en la sección de cabedera, no interesaría que quedase dividida en dos columnas. La etiqueta HTML < colspan > permite fusionar las dos celdas
+			<br><br>
+			En esta primera fila el diseñador, por ejemplo podía intentar insertar una sección independiente de tres columnas, para mostrar un logo y otros elementos, como una barra de navegación o un campo para pedir credenciales de usuario. Para añadir esta sección, el diseñador tenía que crear una nueva tabla (esta vez con una fila de tres columnas) dentro de la primera fila de la tabla inicial
+			<br><br>
+			Para generar esta estructura de tabla, el diseñador tenía que configurar la tabla inicial con una anchura y altura fijas. Supongamos que el diseñador también quisiera un borde negro fino para todos los elementos. La propiedad “border” de las tablas HTML es muy básica no nos permite añadir colores. Una solución frecuente consistía en insertar la tabla actual dentro de otra, que consistía simplemente en una única celda con el fondo en color negro. Al modificar el margen interior y el color de fondo, y fusionar otras celdas más, el diseñador podía así crear una estructura visual basada en tablas con un cierto estilo
+			<br><br>
+			CSS ha sustituido ya el empleo de tablas para organizar las páginas, por lo que los elementos de tabla de HTML van regresando, poco a poco, a su función original, que es la de mostrar datos estructurados, y abandonan su papel como armazón visual de las páginas. Seguramente podrás seguir encontrando numerosos ejemplos de este tipo de estructuras en la web, pero en este libro no vas a aprender a crearlas, sino que vas a aprender los conceptos básicos de CSS que nos permiten obtener los mismos resultados.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Introducción a las opciones de presentación de las páginas</h3>
+		<div class="art-cont_cont">
+			<p>
+				Antes de la estructura visual de nuestras páginas web tenemos que decidir unas cuantas cosas. Lo primero es qué anchura va a tener. Hay dos categorías principales de estructuras en base a su anchura: las de anchura fija y las de ancho variable. En las estructuras de ancho fijo todos los elementos de la página se anidan dentro de un contenedor que tiene un ancho explícito (en este ejemplo utilizamos el valor de 960 pixels, pero se suele utilizar también la unidad de medida em). La anchura fija es una solución muy cómoda para el diseñador ya que permite ubicar con precisión los distintos elementos (cabeceras, barras laterales y pies de página). Además aporta un esqueleto robusto para otros elementos, como la anchura de párrafo o el posicionamiento de imágenes cuando éstas aparecen en gran número (por ejemplo en sitios web de catálogos de producto).
+				<br><br>
+				Las estructuras flexibles se llaman así porque están pensadas para adaptarse a la anchura de la ventana del navegador en cualquier momento. Este tipo de disposiciones es útil cuando los usuarios acceden desde pantallas con resoluciones muy variadas, lo que hace imposible elegir un ancho fijo que ofrezca el mismo aspecto en todas ellas.  Una estructura flexible bien diseñada es capaz de ajustarse automáticamente al tamaño de ventana del navegador.
+				<br><br>
+				Estas estructuras son adecuadas para la web porque permiten el reposicionamiento en pantalla de textos e imágenes. Puesto que los dispositivos móviles suponen actualmente una proporción importante de los navegadores en uso en el mercado, las estructuras flexibles por lo general se prefieren para ofrecer una mejor experiencia en este nuevo tipo de interfaces frente a las estructuras de ancho fijo, que habitualmente tienen problemas por falta de espacio (sobre todo en teléfonos móviles).
+				<br>
+				Las estructuras de ancho variable son más difíciles de diseñar y obligan al creador a resolver una serie de asuntos adicionales. Por ello, en esta lección vamos a empezar por crear una estructura de anchura fija.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Creación de una estructura básica de dos columnas de ancho fijo con CSS</h3>
+		<div class="art-cont_cont">
+			<p>Podemos considerar al elemento  < div > como un contenedor genérico en el que podemos poner elementos relacionados entre sí de forma lógica. La apertura y cierre de etiquetas  < div > suele hacerse rodeando a otros elementos de la página, de forma que dichos elementos quedan anidados dentro del contenedor. Puedes tener en la misma página todos los elementos < div > que consideres necesarios y con frecuencia se utilizan para crear el armazón visual. Un elemento < div > suele llevar un atributo ID (con lo que adquiere un “nombre” explícito dentro de la página) o bien pertenecer a una clase CSS, utilizándose ambos como medio para aplicar al contenedor uno o más estilos CSS. El empleo de elementos < div > facilita a otras personas la identificación de las diversas secciones en que se subdivide la página y también nos ayuda a controlar y aplicar estilos en cada una de ellas.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">La propiedad float en CSS</h3>
+		<div class="art-cont_cont">
+			<p>La propiedad float en CSS hace posible que un texto pueda escribirse alrededor de una imagen. CSS consigue el mismo efecto haciendo que los elementos que siguen a un elemento “flotante” puedan rodearlo, cambiando su posición relativa con respecto a él. 
+			<br><br>
+			El valor float se puede también declarar como“left”, “right” y “none”. No se puede centrar un objeto utilizando esta propiedad.
+			<br><br>
+			Si queremos tener múltiples elementos flotantes dentro del mismo contenedor, el resultado es que se alinean entre sí. Este comportamiento se suele utilizar en ciertas funciones habituales de las páginas web, Es fundamental conocer cómo interactúan múltiples elementos flotantes unos con otros a fin de utilizarlos correctamente.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Creación de columnas con la propiedad float</h3>
+		<div class="art-cont_cont">
+			<p>cuando convertimos en flotante un elemento, queda eliminado del flujo normal del HTML. Es por eso que la barra lateral se extiende por todo el contenedor.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">La propiedad clear</h3>
+		<div class="art-cont_cont">
+			<p>añadimos la propiedad CSS clear a un objeto, le estamos indicando una regla que dice “no admito elementos flotantes a mi lado”. Podemos especificar si queremos que no haya elementos flotantes a la izquierda, a la derecha o en ambos lados.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Creación de un menú de navegación basado en listas con “float”</h3>
+		<div class="art-cont_cont">
+			<p>Ahora que has aprendido los conceptos básicos de “float” y “clear”, volvamos a la sección de la barra de navegación y vamos a añadir un menú sencillo basado en una lista no ordenada Los elementos de la lista dentro de este menú tendrán que ser flotantes para modificar la presentación vertical por defecto de las listas. Los menús de navegación CSS se utilizan mucho en el diseño basado en estándares porque se pueden actualizar y modificar de manera mu sencilla, y porque se basan en textos lo que mejora la accesibilidad en dispositivos como los lectores de pantalla, e incluso ayudan a mejorar el posicionamiento de nuestras páginas en los buscadores.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Añadir estilos para el texto</h3>
+		<div class="art-cont_cont">
+			<p>Cuando estamos diseñando la estructura de las páginas, el empleo de hojas de estilo internas es una cuestión de comodidad: resulta más sencillo para crear y modificar reglas si las tenemos dentro de la página y podemos llegar a ellas desplazando la ventana que si las tenemos en un archivo externo.
+			</p>
+		</div>
+		<h3 class="art-cont_sub">Efecto de los márgenes internos y externos en una estructura de anchura fija</h3>
+		<div class="art-cont_cont">
+			<p>El objetivo de esta práctica no consiste en mostrar un método único de organización con CSS, sino en conocer las diferentes opciones posibles, lo que te ayudará en futuros proyectos a la hora de decidir qué método es el más adecuado en cada caso. En este primer ejercicio vamos a añadir un margen interior (“padding”) al elemento sidebar.
+			<br><br>
+			podemos reducir el ancho de sidebar o de main  (o ambos),  o también podemos reducir el valor del margen interno. Todos estos métodos se basan en el uso de “padding” y existe un método alternativo que nos permite separar el texto del borde de las columnas y que no utiliza el padding en absoluto.
+			<br><br>
+			Esta es una gran ventaja, puesto que el ancho de las columnas es un valor absoluto y ya no se “rompe” la distribución en pantalla con tanta facilidad como cuando utilizamos el valor de padding.
+			<br><br>
+			Pero esta técnica también tiene sus desventajas, puesto que las reglas que acabamos de crear se van a aplicar a todos los párrafos y títulos de nivel 1, 2 y 3 de la página. En el caso de que solo queramos aplicar el margen a los elementos dentro de los divs  “sidebar” y “main”, nos vendrá muy bien el selector de contexto que ya hemos utilizado antes. Este método exige algo más de atención a los detalles que el método basado en el margen interno. También puede que desees que alguno de los elementos tenga un margen distinto.
+			</p>
+		</div>
+   	</scan>
+</article>
