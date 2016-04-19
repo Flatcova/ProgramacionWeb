@@ -1,0 +1,53 @@
+.mdl-layout--fixed-header {
+  background: url('../img/PrograWeb1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.re-size{
+  width: 40px;
+  height: auto;
+  padding: 10px;
+}
+
+/*Style for the blog-posts*/
+.demo-blog__posts .mdl-card > .mdl-card__supporting-text{
+  text-align:justify; 
+}
+.demo-blog__posts .mdl-card > .mdl-card__media{
+  text-align: center;
+  text-transform: uppercase;
+  background: url('../img/PrograWeb.jpg') center / cover;
+  height: 150px;
+}
+.mdl-card {
+    width: auto;
+    margin: 0 auto;
+    text-align: -webkit-center;
+  }
+
+.MR > .mdl-card {
+    width: auto;
+    margin: 0 auto;
+    text-align: -webkit-center;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.MR > .demo-card-wide .mdl-card__supporting-text{
+    width: inherit;
+    text-align: justify;
+    color:#fff;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+.MR > .demo-card-wide .mdl-card__supporting-text .shade {
+  background: -webkit-linear-gradient(white, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

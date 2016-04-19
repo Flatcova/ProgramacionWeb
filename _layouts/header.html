@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row">
+			<img class="re-size" src="{{site.baseurl}}/img/Logo.png">
+			<span class="mdl-layout-title">Programacion Web</span>
+			<div class="mdl-layout-spacer"></div>
+			<nav class="mdl-navigation mdl-layout--large-screen-only">
+				<a class="mdl-navigation__link" href="{{site.baseurl}}/">Home</a>
+		        <a class="mdl-navigation__link" href="{{site.baseurl}}/#">Help</a>
+		        <a class="mdl-navigation__link" href="{{site.baseurl}}/#">About</a>
+			</nav>
+		</div>
+	</header>
+	{% include nav.html %}
+	<main class="mdl-layout__content">
+		<a name="top"></a>
+		{{content}}
+		{% include footer.html %}
+	</main>
+</div>
