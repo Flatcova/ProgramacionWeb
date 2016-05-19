@@ -11,6 +11,39 @@
   padding: 10px;
 }
 
+/*DRAG AND DROP*/
+.DD body{
+  margin: 0px;
+  padding: 0px;
+  background: #1abc9c;
+  font-family: 'Lato',sans-serif;
+}
+
+.DD ul{
+  list-style: none;
+  margin-top: 2em;
+}
+
+.DD ul li{
+  color: #fff;
+  padding: 20px;
+  width: 600px;
+  margin: 0px auto;
+  cursor: pointer;
+  text-align: center;
+}
+
+.DD ul li.item-1{ background: #e74c3c }
+.DD ul li.item-2{ background: #3498db }
+.DD ul li.item-3{ background: #f39c12 }
+.DD ul li.item-4{ background: #27ae60 }
+.DD ul li.item-5{ background: #9b59b6 }
+
+.ui-sortable-placeholder{
+  border: 1px dotted;
+  padding: 30px 20px;
+}
+
 /*Style for the blog-posts*/
 .demo-blog__posts .mdl-card > .mdl-card__supporting-text{
   text-align:justify; 
@@ -51,7 +84,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-canvas{
+#canvas{
   width: 100%;
   height: auto;
   position: center;
@@ -97,31 +130,6 @@ border:0px;
   font-weight:bold;
   font-size:14px;
 }
-
-/*input{
-border:0px;
- background-color:transparent;
-  margin-top:20px;
-  margin-bottom:20px;
-  
-}
-h1{padding:0px;
-
-margin-top:0px;
-}
-
-select {
-padding:5px;
-  margin-bottom:5px;
-  margin-top:5px;
-    
-  width:100%;
-  
-}a{
-  color:#FF2948;
-  font-weight:700;
-  
-}*/
  
 input[type="text"] {
 

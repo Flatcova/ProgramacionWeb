@@ -4,7 +4,14 @@ $(document).ready(function(){
     $("#sub-men").click(function(){
       $("#sub-con").slideToggle("slow");
     });
+    $(function() {  
+        $( "#sortable" ).sortable({   
+            placeholder: "ui-sortable-placeholder"   
+        });  
+    });  
 });
+
+
 
 var utils = {
   norm: function(value, min, max) {
